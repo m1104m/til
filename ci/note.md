@@ -6,12 +6,8 @@
 - リポジトリの取得はcheckoutで取得（ここハマった）
 - workflowにするとCの動作が別れる
 
-'''
-
-
-
+```
 version: 2
-
 jobs:
   build:
     working_directory: ~/repo
@@ -43,7 +39,6 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               aws s3 cp ./test_min.css s3://${AWS_S3_BUCKET_NAME}/pr/
             fi
-
 workflows:
   version: 2
   build-and-deploy:
@@ -52,4 +47,4 @@ workflows:
       - deploy:
           requires:
             - build
-'''
+```
