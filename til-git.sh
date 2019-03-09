@@ -1,3 +1,5 @@
+#!/bin/bash
+
 git add .
-git commit -m "Today I Learned"
+git commit -m '$@'
 git push origin master
