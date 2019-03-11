@@ -6,6 +6,21 @@
 - リポジトリの取得はcheckoutで取得（ここハマった）
 - workflowにするとCの動作が別れる
 
+
+フィールド | 内容
+-- | --
+version: | CircleCIのバージョンを指定
+jobs: | ジョブ名
+build: | ジョブ指定
+docker: | ビルドコンテナ
+docker: -image: | コンテナのイメージ
+steps: | jobで実行する処理を定義
+steps: - checkout | workディレクトリに、ソースをチェックアウト
+steps: - run: | コマンド実行
+
+参考：http://blog.livedoor.jp/harukisan7/archives/16625484.html
+
+
 ```
 version: 2
 jobs:
