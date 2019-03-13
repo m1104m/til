@@ -21,6 +21,20 @@ steps: - run: | コマンド実行
 参考：http://blog.livedoor.jp/harukisan7/archives/16625484.html
 
 
+
+- Clean-Cssを使うと相対パスを自動で変更してしまう。。。
+  - ../img/aaa/img.bg →html/*/img/aaa/img.bg
+  - おそらくCircleCI内のパスに合わせてしまっている可能性あり。
+- js/cssのminimizeするツールを再検討
+
+
+
+- Cloud Frontのキャッシュ消すコマンド
+  - #aws cloudfront create-invalidation --distribution-id {Distribution ID} --paths '{PATH}/*'
+
+
+
+
 ```
 version: 2
 jobs:
